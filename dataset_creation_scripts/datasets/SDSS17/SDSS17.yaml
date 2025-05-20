@@ -1,0 +1,40 @@
+#### For Dataset Description on OpenML
+# Link to the original dataset source.
+#   The DOI. Otherwise, URL to Kaggle, OpenML, etc.
+original_dataset_source: "https://www.kaggle.com/datasets/fedesoriano/stellar-classification-dataset-sdss17"
+
+# Academic reference or a please-cite-request for the dataset.
+#   MLA-style reference, include DOI if possible.
+reference: "Abdurro’uf et al., The Seventeenth data release of the Sloan Digital Sky Surveys: Complete Release of MaNGA, MaStar and APOGEE-2 DATA (Abdurro’uf et al. submitted to ApJS)"
+
+# License under which the data is made available.
+#   E.g. "CC BY 4.0", "MIT", "GPL-3.0", or "Public Domain".
+licence: "Public Domain" # On Kaggle it says Data files © Original Authors which is under public domain.
+
+# When the data was collected/created. If unknown, the date when it was published.
+#   Specific the year from the original source or academic reference.
+#   Otherwise, provide an estimate.
+dataset_year: "2022"
+
+# Notes from us on how the dataset was curated.
+#   - Description of any preprocessing steps we applied.
+#   - Any oddities, anomalies, or manual fixes you encountered.
+# For formatting, please add the bullet points to the list (start by replacing
+#   the N/NA bullet point). This will be printed as a markdown enumeration on OpenML.
+curation_comments: |
+  - We renamed the target feature.
+  - We dropped duplicates based on "obj_ID" to avoid target leakage from subgroups. 
+  - We dropped several (ID-like) meta-features that seem to be not part of the predictive task.
+
+
+#### For OpenML Metadata
+# "classification" or "regression"
+problem_type: "classification"
+
+# Name of the target variable for prediction.
+target_feature: "ObjectType"
+
+# List of features that should be treated as categorical.
+categorical_features:
+  - "fiber_ID"
+  - "plate"

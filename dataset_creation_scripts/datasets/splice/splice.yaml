@@ -1,0 +1,97 @@
+#### For Dataset Description on OpenML
+# Link to the original dataset source.
+#   The DOI. Otherwise, URL to Kaggle, OpenML, etc.
+original_dataset_source: "https://doi.org/10.24432/C5M888"
+
+# Academic reference or a please-cite-request for the dataset.
+#   MLA-style reference, include DOI if possible.
+reference: "Towell, Geoffrey G., and Jude W. Shavlik. 'Knowledge-based artificial neural networks.' Artificial intelligence 70.1-2 (1994): 119-165. https://doi.org/10.1016/0004-3702(94)90105-8"
+
+# License under which the data is made available.
+#   E.g. "CC BY 4.0", "MIT", "GPL-3.0", or "Public Domain".
+licence: "CC BY 4.0"
+
+# When the data was collected/created. If unknown, the date when it was published.
+#   Specific the year from the original source or academic reference.
+#   Otherwise, provide an estimate.
+dataset_year: "1991"
+
+# Notes from us on how the dataset was curated.
+#   - Description of any preprocessing steps we applied.
+#   - Any oddities, anomalies, or manual fixes you encountered.
+# For formatting, please add the bullet points to the list (start by replacing
+#   the N/NA bullet point). This will be printed as a markdown enumeration on OpenML.
+curation_comments: |
+  - We tabularized the fixed-size DNA sequences from the original dataset based on the nucleotide position.
+  - We removed the instance ID.
+  - Anomaly: As always, we randomly shuffle the data before uploading. If one would not randomly shuffle the data, there would be a shift based on the original order of data samples.
+
+#### For OpenML Metadata
+# "classification" or "regression"
+problem_type: "classification"
+
+# Name of the target variable for prediction.
+target_feature: "SiteType"
+
+# List of features that should be treated as categorical.
+categorical_features:
+  - "position_-30"
+  - "position_-29"
+  - "position_-28"
+  - "position_-27"
+  - "position_-26"
+  - "position_-25"
+  - "position_-24"
+  - "position_-23"
+  - "position_-22"
+  - "position_-21"
+  - "position_-20"
+  - "position_-19"
+  - "position_-18"
+  - "position_-17"
+  - "position_-16"
+  - "position_-15"
+  - "position_-14"
+  - "position_-13"
+  - "position_-12"
+  - "position_-11"
+  - "position_-10"
+  - "position_-9"
+  - "position_-8"
+  - "position_-7"
+  - "position_-6"
+  - "position_-5"
+  - "position_-4"
+  - "position_-3"
+  - "position_-2"
+  - "position_-1"
+  - "position_1"
+  - "position_2"
+  - "position_3"
+  - "position_4"
+  - "position_5"
+  - "position_6"
+  - "position_7"
+  - "position_8"
+  - "position_9"
+  - "position_10"
+  - "position_11"
+  - "position_12"
+  - "position_13"
+  - "position_14"
+  - "position_15"
+  - "position_16"
+  - "position_17"
+  - "position_18"
+  - "position_19"
+  - "position_20"
+  - "position_21"
+  - "position_22"
+  - "position_23"
+  - "position_24"
+  - "position_25"
+  - "position_26"
+  - "position_27"
+  - "position_28"
+  - "position_29"
+  - "position_30"

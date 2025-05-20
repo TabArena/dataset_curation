@@ -1,0 +1,132 @@
+#### For Dataset Description on OpenML
+# Link to the original dataset source.
+#   The DOI. Otherwise, URL to Kaggle, OpenML, etc.
+original_dataset_source: "https://doi.org/10.24432/C53P5M"
+
+# Academic reference or a please-cite-request for the dataset.
+#   MLA-style reference, include DOI if possible.
+reference: "Golovenkin, Sergey E., et al. 'Trajectories, bifurcations, and pseudo-time in large clinical datasets: applications to myocardial infarction and diabetes data.' GigaScience 9.11 (2020): giaa128. https://doi.org/10.1093/gigascience/giaa128"
+
+# License under which the data is made available.
+#   E.g. "CC BY 4.0", "MIT", "GPL-3.0", or "Public Domain".
+licence: "CC BY 4.0"
+
+# When the data was collected/created. If unknown, the date when it was published.
+#   Specific the year from the original source or academic reference.
+#   Otherwise, provide an estimate.
+dataset_year: "2020"
+
+# Notes from us on how the dataset was curated.
+#   - Description of any preprocessing steps we applied.
+#   - Any oddities, anomalies, or manual fixes you encountered.
+# For formatting, please add the bullet points to the list (start by replacing
+#   the N/NA bullet point). This will be printed as a markdown enumeration on OpenML.
+curation_comments: |
+  - There are 12 possible targets and four possible time moments to predict the targets for this dataset. We use the categorical target as it summarizes the other possible targets. Furthermore, we use the last possible time point for prediction to utilize all available data. 
+  - We treat "?" as missing values.
+  - We dropped the "id" column.
+  - We reversed the ordinal encoding of the target feature.
+
+#### For OpenML Metadata
+# "classification" or "regression"
+problem_type: "classification"
+
+# Name of the target variable for prediction.
+target_feature: "LET_IS"
+
+# List of features that should be treated as categorical.
+categorical_features:
+  - "SEX"
+  - "INF_ANAM"
+  - "STENOK_AN"
+  - "FK_STENOK"
+  - "IBS_POST"
+  - "IBS_NASL"
+  - "GB"
+  - "SIM_GIPERT"
+  - "DLIT_AG"
+  - "ZSN_A"
+  - "nr_11"
+  - "nr_01"
+  - "nr_02"
+  - "nr_03"
+  - "nr_04"
+  - "nr_07"
+  - "nr_08"
+  - "np_01"
+  - "np_04"
+  - "np_05"
+  - "np_07"
+  - "np_08"
+  - "np_09"
+  - "np_10"
+  - "endocr_01"
+  - "endocr_02"
+  - "endocr_03"
+  - "zab_leg_01"
+  - "zab_leg_02"
+  - "zab_leg_03"
+  - "zab_leg_04"
+  - "zab_leg_06"
+  - "O_L_POST"
+  - "K_SH_POST"
+  - "MP_TP_POST"
+  - "SVT_POST"
+  - "GT_POST"
+  - "FIB_G_POST"
+  - "ant_im"
+  - "lat_im"
+  - "inf_im"
+  - "post_im"
+  - "IM_PG_P"
+  - "ritm_ecg_p_01"
+  - "ritm_ecg_p_02"
+  - "ritm_ecg_p_04"
+  - "ritm_ecg_p_06"
+  - "ritm_ecg_p_07"
+  - "ritm_ecg_p_08"
+  - "n_r_ecg_p_01"
+  - "n_r_ecg_p_02"
+  - "n_r_ecg_p_03"
+  - "n_r_ecg_p_04"
+  - "n_r_ecg_p_05"
+  - "n_r_ecg_p_06"
+  - "n_r_ecg_p_08"
+  - "n_r_ecg_p_09"
+  - "n_r_ecg_p_10"
+  - "n_p_ecg_p_01"
+  - "n_p_ecg_p_03"
+  - "n_p_ecg_p_04"
+  - "n_p_ecg_p_05"
+  - "n_p_ecg_p_06"
+  - "n_p_ecg_p_07"
+  - "n_p_ecg_p_08"
+  - "n_p_ecg_p_09"
+  - "n_p_ecg_p_10"
+  - "n_p_ecg_p_11"
+  - "n_p_ecg_p_12"
+  - "fibr_ter_01"
+  - "fibr_ter_02"
+  - "fibr_ter_03"
+  - "fibr_ter_05"
+  - "fibr_ter_06"
+  - "fibr_ter_07"
+  - "fibr_ter_08"
+  - "GIPO_K"
+  - "GIPER_NA"
+  - "TIME_B_S"
+  - "R_AB_1_n"
+  - "R_AB_2_n"
+  - "R_AB_3_n"
+  - "NA_KB"
+  - "NOT_NA_KB"
+  - "LID_KB"
+  - "NITR_S"
+  - "NOT_NA_1_n"
+  - "LID_S_n"
+  - "B_BLOK_S_n"
+  - "ANT_CA_S_n"
+  - "GEPAR_S_n"
+  - "ASP_S_n"
+  - "TIKL_S_n"
+  - "TRENT_S_n"

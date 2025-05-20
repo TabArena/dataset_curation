@@ -1,0 +1,61 @@
+#### For Dataset Description on OpenML
+# Link to the original dataset source.
+#   The DOI. Otherwise, URL to Kaggle, OpenML, etc.
+original_dataset_source: "https://doi.org/10.24432/C5GS4P"
+
+# Academic reference or a please-cite-request for the dataset.
+#   MLA-style reference, include DOI if possible.
+reference: "Wang, Tong, et al. 'A bayesian framework for learning rule sets for interpretable classification.' Journal of Machine Learning Research 18.70 (2017): 1-37. https://www.jmlr.org/papers/v18/16-003.html"
+
+# License under which the data is made available.
+#   E.g. "CC BY 4.0", "MIT", "GPL-3.0", or "Public Domain".
+licence: "CC BY 4.0"
+
+# When the data was collected/created. If unknown, the date when it was published.
+#   Specific the year from the original source or academic reference.
+#   Otherwise, provide an estimate.
+dataset_year: "2017" # Paper date, donated in 2020
+
+# Notes from us on how the dataset was curated.
+#   - Description of any preprocessing steps we applied.
+#   - Any oddities, anomalies, or manual fixes you encountered.
+# For formatting, please add the bullet points to the list (start by replacing
+#   the N/NA bullet point). This will be printed as a markdown enumeration on OpenML.
+curation_comments: |
+  - We renamed the target feature and its value to be more descriptive.
+  - We removed text data from the "time" feature to make it numeric.
+  - We drop constant columns.
+  - We fixed a typo in the feature names. 
+  - Anomaly: the data has many binned numeric features that are treated as categorical features with text describing the bins.
+  - Anomaly: the numeric features in the dataset are low-cardinality (<25)
+
+#### For OpenML Metadata
+# "classification" or "regression"
+problem_type: "classification"
+
+# Name of the target variable for prediction.
+target_feature: "AcceptCoupon"
+
+# List of features that should be treated as categorical.
+categorical_features:
+  - "destination"
+  - "passenger"
+  - "weather"
+  - "expiration"
+  - "gender"
+  - "age"
+  - "maritalStatus"
+  - "has_children"
+  - "education"
+  - "occupation"
+  - "income"
+  - "car"
+  - "Bar"
+  - "CoffeeHouse"
+  - "CarryAway"
+  - "RestaurantLessThan20"
+  - "Restaurant20To50"
+  - "toCoupon_GEQ15min"
+  - "toCoupon_GEQ25min"
+  - "direction_same"
+  - "direction_opp"

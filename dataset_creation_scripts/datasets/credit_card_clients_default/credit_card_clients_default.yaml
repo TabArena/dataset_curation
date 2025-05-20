@@ -1,0 +1,41 @@
+#### For Dataset Description on OpenML
+# Link to the original dataset source.
+#   The DOI. Otherwise, URL to Kaggle, OpenML, etc.
+original_dataset_source: "https://doi.org/10.24432/C55S3H"
+
+# Academic reference or a please-cite-request for the dataset.
+#   MLA-style reference, include DOI if possible.
+reference: "Yeh, I-Cheng, and Che-hui Lien. 'The comparisons of data mining techniques for the predictive accuracy of probability of default of credit card clients.' Expert systems with applications 36.2 (2009): 2473-2480. https://doi.org/10.1016/j.eswa.2007.12.020"
+
+# License under which the data is made available.
+#   E.g. "CC BY 4.0", "MIT", "GPL-3.0", or "Public Domain".
+licence: "CC BY 4.0"
+
+# When the data was collected/created. If unknown, the date when it was published.
+#   Specific the year from the original source or academic reference.
+#   Otherwise, provide an estimate.
+dataset_year: "2009" # Donated 2016
+
+# Notes from us on how the dataset was curated.
+#   - Description of any preprocessing steps we applied.
+#   - Any oddities, anomalies, or manual fixes you encountered.
+# For formatting, please add the bullet points to the list (start by replacing
+#   the N/NA bullet point). This will be printed as a markdown enumeration on OpenML.
+curation_comments: |
+  - We rename the target variable and restore the original class names.
+  - We drop the "ID" column.
+  - Anomaly: the data has temporal features but the task is time-invariant.
+  
+
+#### For OpenML Metadata
+# "classification" or "regression"
+problem_type: "classification"
+
+# Name of the target variable for prediction.
+target_feature: "DefaultOnPaymentNextMonth"
+
+# List of features that should be treated as categorical.
+categorical_features: # PAY_* features are ordinal, so we keep them numeric.
+  - "SEX"
+  - "EDUCATION"
+  - "MARRIAGE"

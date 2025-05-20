@@ -1,0 +1,43 @@
+#### For Dataset Description on OpenML
+# Link to the original dataset source.
+#   The DOI. Otherwise, URL to Kaggle, OpenML, etc.
+original_dataset_source: "https://www.kaggle.com/datasets/ddosad/datacamps-data-science-associate-certification"
+
+# Academic reference or a please-cite-request for the dataset.
+#   MLA-style reference, include DOI if possible.
+reference: "Kaggle User Ddosad. 'Fitness Club Dataset for ML Classification.' Kaggle, 2023, https://www.kaggle.com/datasets/ddosad/datacamps-data-science-associate-certification."
+
+# License under which the data is made available.
+#   E.g. "CC BY 4.0", "MIT", "GPL-3.0", or "Public Domain".
+licence: "Public Domain" # No license specified under license, so we assume public domain due to usage on Kaggle.
+
+# When the data was collected/created. If unknown, the date when it was published.
+#   Specific the year from the original source or academic reference.
+#   Otherwise, provide an estimate.
+dataset_year: "2023"
+
+# Notes from us on how the dataset was curated.
+#   - Description of any preprocessing steps we applied.
+#   - Any oddities, anomalies, or manual fixes you encountered.
+# For formatting, please add the bullet points to the list (start by replacing
+#   the N/NA bullet point). This will be printed as a markdown enumeration on OpenML.
+curation_comments: |
+  - We dropped the ID column.
+  - We renamed the values of the target variable to be more meaningful.
+  - We treat "-0" values as "0" values for the target, following the description.
+  - We removed trailing words (like "days") from "days_before".
+  - We aligned the naming of "day_of_week" to be consistent per day. 
+  
+
+#### For OpenML Metadata
+# "classification" or "regression"
+problem_type: "classification"
+
+# Name of the target variable for prediction.
+target_feature: "attended"
+
+# List of features that should be treated as categorical.
+categorical_features:
+  - "day_of_week"
+  - "time"
+  - "category"

@@ -1,0 +1,42 @@
+#### For Dataset Description on OpenML
+# Link to the original dataset source.
+#   The DOI. Otherwise, URL to Kaggle, OpenML, etc.
+original_dataset_source: "https://doi.org/10.24432/C5F88Q"
+
+# Academic reference or a please-cite-request for the dataset.
+#   MLA-style reference, include DOI if possible.
+reference: "Sakar, C. Okan, et al. 'Real-time prediction of online shoppers’ purchasing intention using multilayer perceptron and LSTM recurrent neural networks.' Neural Computing and Applications 31.10 (2019): 6893-6908.  https://doi.org/10.1007/s00521-018-3523-0"
+
+# License under which the data is made available.
+#   E.g. "CC BY 4.0", "MIT", "GPL-3.0", or "Public Domain".
+licence: "CC BY 4.0"
+
+# When the data was collected/created. If unknown, the date when it was published.
+#   Specific the year from the original source or academic reference.
+#   Otherwise, provide an estimate.
+dataset_year: "2017" # Donated in 2018, Paper submitted in 2017
+
+# Notes from us on how the dataset was curated.
+#   - Description of any preprocessing steps we applied.
+#   - Any oddities, anomalies, or manual fixes you encountered.
+# For formatting, please add the bullet points to the list (start by replacing
+#   the N/NA bullet point). This will be printed as a markdown enumeration on OpenML.
+curation_comments: |
+  - Anomaly: the data contains time-based features that were preprocessed to create a time-invariant predictive task. 
+
+#### For OpenML Metadata
+# "classification" or "regression"
+problem_type: "classification"
+
+# Name of the target variable for prediction.
+target_feature: "Revenue"
+
+# List of features that should be treated as categorical.
+categorical_features:
+  - "Month"
+  - "OperatingSystems"
+  - "Browser"
+  - "Region"
+  - "TrafficType"
+  - "VisitorType"
+  - "Weekend"

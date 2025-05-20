@@ -1,0 +1,37 @@
+#### For Dataset Description on OpenML
+# Link to the original dataset source.
+#   The DOI. Otherwise, URL to Kaggle, OpenML, etc.
+original_dataset_source: "https://www.kaggle.com/c/bioresponse"
+
+# Academic reference or a please-cite-request for the dataset.
+#   MLA-style reference, include DOI if possible.
+reference: "Ben Hamner, dcthompson, and Jorg. Predicting a Biological Response. https://kaggle.com/competitions/bioresponse, 2012. Kaggle."
+
+# License under which the data is made available.
+#   E.g. "CC BY 4.0", "MIT", "GPL-3.0", or "Public Domain".
+licence: "Public Domain" # Kaggle Competition Rules do not take about data but it is used a lot, also public on OpenML -> we assume public domain
+
+# When the data was collected/created. If unknown, the date when it was published.
+#   Specific the year from the original source or academic reference.
+#   Otherwise, provide an estimate.
+dataset_year: "2012"
+
+# Notes from us on how the dataset was curated.
+#   - Description of any preprocessing steps we applied.
+#   - Any oddities, anomalies, or manual fixes you encountered.
+# For formatting, please add the bullet points to the list (start by replacing
+#   the N/NA bullet point). This will be printed as a markdown enumeration on OpenML.
+curation_comments: |
+  - We only use the training data from Kaggle.
+  - Anomaly: all feature represent molecular descriptors but we do not have more semantic information.
+  - Anomaly: a large amount of the features (D953-D1776) are sparsely binary encoded variables.
+
+#### For OpenML Metadata
+# "classification" or "regression"
+problem_type: "classification"
+
+# Name of the target variable for prediction.
+target_feature: "MoleculeElicitsResponse"
+
+# List of features that should be treated as categorical.
+categorical_features: [] # N/A, we have no information about the feature types

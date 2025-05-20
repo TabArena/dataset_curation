@@ -1,0 +1,35 @@
+#### For Dataset Description on OpenML
+# Link to the original dataset source.
+#   The DOI. Otherwise, URL to Kaggle, OpenML, etc.
+original_dataset_source: "https://www.kaggle.com/datasets/averkiyoliabev/home-equity-line-of-creditheloc"
+
+# Academic reference or a please-cite-request for the dataset.
+#   MLA-style reference, include DOI if possible.
+reference: "Kaggle User Averkiyoliabev. 'Home Equity Line of Credit (HELOC).' Kaggle, 2021, https://www.kaggle.com/datasets/averkiyoliabev/home-equity-line-of-creditheloc."
+
+# License under which the data is made available.
+#   E.g. "CC BY 4.0", "MIT", "GPL-3.0", or "Public Domain".
+licence: "Public" # Unknown / not specified, but due to Kaggle usage we assume public domain.
+
+# When the data was collected/created. If unknown, the date when it was published.
+#   Specific the year from the original source or academic reference.
+#   Otherwise, provide an estimate.
+dataset_year: "2021"
+
+# Notes from us on how the dataset was curated.
+#   - Description of any preprocessing steps we applied.
+#   - Any oddities, anomalies, or manual fixes you encountered.
+# For formatting, please add the bullet points to the list (start by replacing
+#   the N/NA bullet point). This will be printed as a markdown enumeration on OpenML.
+curation_comments: |
+  - Anomaly: the dataset has time-related features. However, the task and features are preprocessed to be time-invariant.
+
+#### For OpenML Metadata
+# "classification" or "regression"
+problem_type: "classification"
+
+# Name of the target variable for prediction.
+target_feature: "RiskPerformance"
+
+# List of features that should be treated as categorical.
+categorical_features: [] # No categorical features in the dataset

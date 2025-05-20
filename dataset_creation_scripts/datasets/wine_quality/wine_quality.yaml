@@ -1,0 +1,38 @@
+#### For Dataset Description on OpenML
+# Link to the original dataset source.
+#   The DOI. Otherwise, URL to Kaggle, OpenML, etc.
+original_dataset_source: "https://doi.org/10.24432/C56S3T"
+
+# Academic reference or a please-cite-request for the dataset.
+#   MLA-style reference, include DOI if possible.
+reference: "Cortez, Paulo, et al. 'Modeling wine preferences by data mining from physicochemical properties.' Decision support systems 47.4 (2009): 547-553. https://doi.org/10.1016/j.dss.2009.05.016"
+
+# License under which the data is made available.
+#   E.g. "CC BY 4.0", "MIT", "GPL-3.0", or "Public Domain".
+licence: "CC BY 4.0"
+
+# When the data was collected/created. If unknown, the date when it was published.
+#   Specific the year from the original source or academic reference.
+#   Otherwise, provide an estimate.
+dataset_year: "2009"
+
+# Notes from us on how the dataset was curated.
+#   - Description of any preprocessing steps we applied.
+#   - Any oddities, anomalies, or manual fixes you encountered.
+# For formatting, please add the bullet points to the list (start by replacing
+#   the N/NA bullet point). This will be printed as a markdown enumeration on OpenML.
+curation_comments: |
+  - We combine the original datasets for red and white wine into a single dataset with an additional column indicating the type of wine (red or white).
+  - We treat the task as a regression problem, following the original work and because the target is the median wine quality (of at least 3 evaluations by experts).
+  - Anomaly: the data has a high number of duplicates (18%). 
+
+#### For OpenML Metadata
+# "classification" or "regression"
+problem_type: "regression"
+
+# Name of the target variable for prediction.
+target_feature: "median_wine_quality"
+
+# List of features that should be treated as categorical.
+categorical_features:
+  - "wine_color"

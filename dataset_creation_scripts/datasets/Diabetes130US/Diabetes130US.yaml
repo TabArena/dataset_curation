@@ -1,0 +1,79 @@
+#### For Dataset Description on OpenML
+# Link to the original dataset source.
+#   The DOI. Otherwise, URL to Kaggle, OpenML, etc.
+original_dataset_source: "https://doi.org/10.24432/C5230J"
+
+# Academic reference or a please-cite-request for the dataset.
+#   MLA-style reference, include DOI if possible.
+reference: "Strack, Beata, et al. 'Impact of HbA1c measurement on hospital readmission rates: analysis of 70,000 clinical database patient records.' BioMed research international 2014.1 (2014): 781670. https://doi.org/10.1155/2014/781670"
+
+# License under which the data is made available.
+#   E.g. "CC BY 4.0", "MIT", "GPL-3.0", or "Public Domain".
+licence: "CC BY 4.0"
+
+# When the data was collected/created. If unknown, the date when it was published.
+#   Specific the year from the original source or academic reference.
+#   Otherwise, provide an estimate.
+dataset_year: "2014"
+
+# Notes from us on how the dataset was curated.
+#   - Description of any preprocessing steps we applied.
+#   - Any oddities, anomalies, or manual fixes you encountered.
+# For formatting, please add the bullet points to the list (start by replacing
+#   the N/NA bullet point). This will be printed as a markdown enumeration on OpenML.
+curation_comments: |
+  - We drop duplicated patients based on the "patient_nbr" feature to avoid target leakage.
+  - We reversed the original ordinal encoding for three ID-based features. 
+  - We created the target from the "readmitted" column following the original task description.
+  - We dropped "encounter_id" and "patient_nbr", which are both unique identifiers for each row.
+  - We keep original "?", NULL-codes, and NaN values because they exist in different ways across the columns.
+  - Anomaly: There is a distribution shift based on the original order. The reason for this might be that the encounters are ordered in some way such that later parts of the data contain different sub-groups than earlier parts. This is also indicate by the fact that the "payer_code" feature is responsible for the shift. This distribution shift vanishes after randomly shuffling the data (as done by default for this and all other datasets used in TabArena).
+
+#### For OpenML Metadata
+# "classification" or "regression"
+problem_type: "classification"
+
+# Name of the target variable for prediction.
+target_feature: "EarlyReadmission"
+
+# List of features that should be treated as categorical.
+categorical_features:
+  - "race"
+  - "gender"
+  - "age"
+  - "weight"  # is binned data
+  - "admission_type_id"
+  - "discharge_disposition_id"
+  - "admission_source_id"
+  - "payer_code"
+  - "medical_specialty"
+  - "diag_1"
+  - "diag_2"
+  - "diag_3"
+  - "max_glu_serum"
+  - "A1Cresult"
+  - "metformin"
+  - "repaglinide"
+  - "nateglinide"
+  - "chlorpropamide"
+  - "glimepiride"
+  - "acetohexamide"
+  - "glipizide"
+  - "glyburide"
+  - "tolbutamide"
+  - "pioglitazone"
+  - "rosiglitazone"
+  - "acarbose"
+  - "miglitol"
+  - "troglitazone"
+  - "tolazamide"
+  - "examide"
+  - "citoglipton"
+  - "insulin"
+  - "glyburide-metformin"
+  - "glipizide-metformin"
+  - "glimepiride-pioglitazone"
+  - "metformin-rosiglitazone"
+  - "metformin-pioglitazone"
+  - "change"
+  - "diabetesMed"

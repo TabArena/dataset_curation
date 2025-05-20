@@ -1,0 +1,40 @@
+#### For Dataset Description on OpenML
+# Link to the original dataset source.
+#   The DOI. Otherwise, URL to Kaggle, OpenML, etc.
+original_dataset_source: "https://www.kaggle.com/datasets/rajatkumar30/food-delivery-time"
+
+# Academic reference or a please-cite-request for the dataset.
+#   MLA-style reference, include DOI if possible.
+reference: "Kaggle User Rajatkumar30. 'Food Delivery Time.' Kaggle, 2023, https://www.kaggle.com/datasets/rajatkumar30/food-delivery-time."
+
+# License under which the data is made available.
+#   E.g. "CC BY 4.0", "MIT", "GPL-3.0", or "Public Domain".
+licence: "Database Contents License (DbCL) v1.0"
+
+# When the data was collected/created. If unknown, the date when it was published.
+#   Specific the year from the original source or academic reference.
+#   Otherwise, provide an estimate.
+dataset_year: "2023"
+
+# Notes from us on how the dataset was curated.
+#   - Description of any preprocessing steps we applied.
+#   - Any oddities, anomalies, or manual fixes you encountered.
+# For formatting, please add the bullet points to the list (start by replacing
+#   the N/NA bullet point). This will be printed as a markdown enumeration on OpenML.
+curation_comments: |
+  - We dropped entries with a duplicated ID, keeping only the first one.
+  - We dropped the ID column.
+  - Anomaly: The ID of the delivery person is given as a feature. In some contexts, this feature might not be allowed to use. Moreover, using this information might require considering a temporal split where a cold-start problem is covered.
+
+#### For OpenML Metadata
+# "classification" or "regression"
+problem_type: "regression"
+
+# Name of the target variable for prediction.
+target_feature: "Time_taken(min)"
+
+# List of features that should be treated as categorical.
+categorical_features:
+  - "Delivery_person_ID"
+  - "Type_of_order"
+  - "Type_of_vehicle"

@@ -1,0 +1,38 @@
+#### For Dataset Description on OpenML
+# Link to the original dataset source.
+#   The DOI. Otherwise, URL to Kaggle, OpenML, etc.
+original_dataset_source: "https://github.com/tidyverse/ggplot2/blob/main/data-raw/diamonds.csv"
+
+# Academic reference or a please-cite-request for the dataset.
+#   MLA-style reference, include DOI if possible.
+reference: "Wickham, Hadley, and Hadley Wickham. 'Data analysis.' ggplot2: Elegant graphics for data analysis (2016): 189-201. https://doi.org/10.1007/978-3-319-24277-4_9"
+
+# License under which the data is made available.
+#   E.g. "CC BY 4.0", "MIT", "GPL-3.0", or "Public Domain".
+licence: "MIT License" # MIT from GitHub, Public on OpenML
+
+# When the data was collected/created. If unknown, the date when it was published.
+#   Specific the year from the original source or academic reference.
+#   Otherwise, provide an estimate.
+dataset_year: "2015"
+
+# Notes from us on how the dataset was curated.
+#   - Description of any preprocessing steps we applied.
+#   - Any oddities, anomalies, or manual fixes you encountered.
+# For formatting, please add the bullet points to the list (start by replacing
+#   the N/NA bullet point). This will be printed as a markdown enumeration on OpenML.
+curation_comments: |
+    - N/A
+
+#### For OpenML Metadata
+# "classification" or "regression"
+problem_type: "regression"
+
+# Name of the target variable for prediction.
+target_feature: "price"
+
+# List of features that should be treated as categorical.
+categorical_features:
+  - "cut"
+  - "color"
+  - "clarity"

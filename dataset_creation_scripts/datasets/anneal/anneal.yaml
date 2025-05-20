@@ -1,0 +1,68 @@
+#### For Dataset Description on OpenML
+# Link to the original dataset source.
+#   The DOI. Otherwise, URL to Kaggle, OpenML, etc.
+original_dataset_source: "https://doi.org/10.24432/C5RW2F"
+
+# Academic reference or a please-cite-request for the dataset.
+#   MLA-style reference, include DOI if possible.
+reference: "'Annealing.' UCI Machine Learning Repository,  https://doi.org/10.24432/C5RW2F."
+
+# License under which the data is made available.
+#   E.g. "CC BY 4.0", "MIT", "GPL-3.0", or "Public Domain".
+licence: "CC BY 4.0"
+
+# When the data was collected/created. If unknown, the date when it was published.
+#   Specific the year from the original source or academic reference.
+#   Otherwise, provide an estimate.
+dataset_year: "1990"
+
+# List of notes from us on how the dataset was curated.
+#   - Description of any preprocessing steps we applied.
+#   - Any oddities, anomalies, or manual fixes you encountered.
+curation_comments: |
+  - We combined train and test data into a single dataset.
+  - We replaced '?' with 'not_applicable' as described in the metadata.
+  - We renamed some features to remove '/' characters.
+  - Anomaly: In the original data, class 4 is in the metadata, but there are no samples in this class.
+
+#### For OpenML Metadata
+# "classification" or "regression"
+problem_type: "classification"
+
+# Name of the target variable for prediction.
+target_feature: "classes"
+
+# List of features that should be treated as categorical.
+categorical_features:
+  - "family"
+  - "product-type"
+  - "steel"
+  - "temper_rolling"
+  - "condition"
+  - "formability"
+  - "non-ageing"
+  - "surface-finish"
+  - "surface-quality"
+  - "enamelability"
+  - "bc"
+  - "bf"
+  - "bt"
+  - "bw_me"
+  - "bl"
+  - "m"
+  - "chrom"
+  - "phos"
+  - "cbond"
+  - "marvi"
+  - "exptl"
+  - "ferro"
+  - "corr"
+  - "blue_bright_varn_clean"
+  - "lustre"
+  - "jurofm"
+  - "s"
+  - "p"
+  - "shape"
+  - "oil"
+  - "bore"
+  - "packing"

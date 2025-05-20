@@ -1,0 +1,36 @@
+#### For Dataset Description on OpenML
+# Link to the original dataset source.
+#   The DOI. Otherwise, URL to Kaggle, OpenML, etc.
+original_dataset_source: "https://doi.org/10.24432/C5VW2C"
+
+# Academic reference or a please-cite-request for the dataset.
+#   MLA-style reference, include DOI if possible.
+reference: "Brooks, Thomas F., D. Stuart Pope, and Michael A. Marcolini. Airfoil self-noise and prediction. No. L-16528. 1989. https://ntrs.nasa.gov/citations/19890016302"
+
+# License under which the data is made available.
+#   E.g. "CC BY 4.0", "MIT", "GPL-3.0", or "Public Domain".
+licence: "CC BY 4.0"
+
+# When the data was collected/created. If unknown, the date when it was published.
+#   Specific the year from the original source or academic reference.
+#   Otherwise, provide an estimate.
+dataset_year: "2014"
+
+# Notes from us on how the dataset was curated.
+#   - Description of any preprocessing steps we applied.
+#   - Any oddities, anomalies, or manual fixes you encountered.
+# For formatting, please add the bullet points to the list (start by replacing
+#   the N/NA bullet point). This will be printed as a markdown enumeration on OpenML.
+curation_comments: |
+  - N/A
+
+#### For OpenML Metadata
+# "classification" or "regression"
+problem_type: "regression"
+
+# Name of the target variable for prediction.
+target_feature: "scaled-sound-pressure"
+
+# List of features that should be treated as categorical.
+categorical_features:
+  - "attack-angle"

@@ -1,0 +1,38 @@
+#### For Dataset Description on OpenML
+# Link to the original dataset source.
+#   The DOI. Otherwise, URL to Kaggle, OpenML, etc.
+original_dataset_source: "https://www.openml.org/search?type=data&id=43093&sort=runs&status=active" # We were unable to find the true original source from the paper, but this is the oldest available data source.
+
+# Academic reference or a please-cite-request for the dataset.
+#   MLA-style reference, include DOI if possible.
+reference: "Bourassa, Steven C., et al. 'Big data, accessibility and urban house prices.' Urban Studies 58.15 (2021): 3176-3195. https://doi.org/10.1177/0042098020982508"
+
+# License under which the data is made available.
+#   E.g. "CC BY 4.0", "MIT", "GPL-3.0", or "Public Domain".
+licence: "CC BY-NC-SA"
+
+# When the data was collected/created. If unknown, the date when it was published.
+#   Specific the year from the original source or academic reference.
+#   Otherwise, provide an estimate.
+dataset_year: "2016" # data from 2016, curated in 2021
+
+# Notes from us on how the dataset was curated.
+#   - Description of any preprocessing steps we applied.
+#   - Any oddities, anomalies, or manual fixes you encountered.
+# For formatting, please add the bullet points to the list (start by replacing
+#   the N/NA bullet point). This will be printed as a markdown enumeration on OpenML.
+curation_comments: |
+  - We drop duplicated homes (non-unique identifiers and location) (~1% of the data).
+  - We drop the ID column "PARCELNO". 
+  - Anomaly: while the original paper describes data with 57k samples, we only have 13k on OpenML or Kaggle.
+
+#### For OpenML Metadata
+# "classification" or "regression"
+problem_type: "regression"
+
+# Name of the target variable for prediction.
+target_feature: "SALE_PRC"
+
+# List of features that should be treated as categorical.
+categorical_features: # month_sold and structure_quality could also be treated as categorical
+  - "avno60plus"

@@ -1,0 +1,45 @@
+#### For Dataset Description on OpenML
+# Link to the original dataset source.
+#   The DOI. Otherwise, URL to Kaggle, OpenML, etc.
+original_dataset_source: "https://www.kaggle.com/datasets/rodsaldanha/arketing-campaign"
+
+# Academic reference or a please-cite-request for the dataset.
+#   MLA-style reference, include DOI if possible.
+reference: "Saldanha, Rodolfo. 'Marketing Campaign.' Kaggle, 2020, https://www.kaggle.com/datasets/rodsaldanha/arketing-campaign."
+
+# License under which the data is made available.
+#   E.g. "CC BY 4.0", "MIT", "GPL-3.0", or "Public Domain".
+licence: "Public" # No license specified on Kaggle, but we assume it is public due to Kaggle usage.
+
+# When the data was collected/created. If unknown, the date when it was published.
+#   Specific the year from the original source or academic reference.
+#   Otherwise, provide an estimate.
+dataset_year: "2020"
+
+# Notes from us on how the dataset was curated.
+#   - Description of any preprocessing steps we applied.
+#   - Any oddities, anomalies, or manual fixes you encountered.
+# For formatting, please add the bullet points to the list (start by replacing
+#   the N/NA bullet point). This will be printed as a markdown enumeration on OpenML.
+curation_comments: |
+  - We drop the ID column.
+  - We rename the values of the target variable to be more descriptive.
+  - We drop constant columns.
+
+#### For OpenML Metadata
+# "classification" or "regression"
+problem_type: "classification"
+
+# Name of the target variable for prediction.
+target_feature: "Response"
+
+# List of features that should be treated as categorical.
+categorical_features:
+  - "Complain"
+  - "AcceptedCmp1"
+  - "AcceptedCmp2"
+  - "AcceptedCmp3"
+  - "AcceptedCmp4"
+  - "AcceptedCmp5"
+  - "Marital_Status"
+  - "Education"

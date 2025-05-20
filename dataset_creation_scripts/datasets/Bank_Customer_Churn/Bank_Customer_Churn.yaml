@@ -1,0 +1,40 @@
+#### For Dataset Description on OpenML
+# Link to the original dataset source.
+#   The DOI. Otherwise, URL to Kaggle, OpenML, etc.
+original_dataset_source: "https://www.kaggle.com/datasets/gauravtopre/bank-customer-churn-dataset" # Not the original source. We also found another source from 2020 (https://drive.google.com/drive/folders/1hGpnrfAVzcuHpNVQeHz46c_4tWmu1Y23) but this does not seem to be the original source either.
+
+# Academic reference or a please-cite-request for the dataset.
+#   MLA-style reference, include DOI if possible.
+reference: "Topre, Gaurav. 'Bank Customer Churn Dataset.' Kaggle, 2022, https://www.kaggle.com/datasets/gauravtopre/bank-customer-churn-dataset."
+
+# License under which the data is made available.
+#   E.g. "CC BY 4.0", "MIT", "GPL-3.0", or "Public Domain".
+licence: "Public" # No license specified under license, so we assume public domain due to heavy usage on Kaggle.
+
+# When the data was collected/created. If unknown, the date when it was published.
+#   Specific the year from the original source or academic reference.
+#   Otherwise, provide an estimate.
+dataset_year: "2020"
+
+# Notes from us on how the dataset was curated.
+#   - Description of any preprocessing steps we applied.
+#   - Any oddities, anomalies, or manual fixes you encountered.
+# For formatting, please add the bullet points to the list (start by replacing
+#   the N/NA bullet point). This will be printed as a markdown enumeration on OpenML.
+curation_comments: |
+  - We renamed the values of the target variable to be more meaningful.
+  - We dropped the ID column.
+
+#### For OpenML Metadata
+# "classification" or "regression"
+problem_type: "classification"
+
+# Name of the target variable for prediction.
+target_feature: "churn"
+
+# List of features that should be treated as categorical.
+categorical_features: # products_number seems ordinal, we keep it as numeric.
+  - "country"
+  - "gender"
+  - "credit_card"
+  - "active_member"

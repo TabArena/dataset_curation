@@ -1,0 +1,40 @@
+#### For Dataset Description on OpenML
+# Link to the original dataset source.
+#   The DOI. Otherwise, URL to Kaggle, OpenML, etc.
+original_dataset_source: "https://doi.org/10.24432/C5V60Q"
+
+# Academic reference or a please-cite-request for the dataset.
+#   MLA-style reference, include DOI if possible.
+reference: "IDA2016Challenge [Dataset]. (2016). UCI Machine Learning Repository. https://doi.org/10.24432/C5V60Q."
+
+# License under which the data is made available.
+#   E.g. "CC BY 4.0", "MIT", "GPL-3.0", or "Public Domain".
+licence: "CC BY 4.0" # In data files, it states GNU General Public License, but CC BY 4.0 on UCI.
+
+# When the data was collected/created. If unknown, the date when it was published.
+#   Specific the year from the original source or academic reference.
+#   Otherwise, provide an estimate.
+dataset_year: "2016"
+
+# Notes from us on how the dataset was curated.
+#   - Description of any preprocessing steps we applied.
+#   - Any oddities, anomalies, or manual fixes you encountered.
+# For formatting, please add the bullet points to the list (start by replacing
+#   the N/NA bullet point). This will be printed as a markdown enumeration on OpenML.
+curation_comments: |
+  - We combined the original training and testing data into a single dataset.
+  - We renamed the target feature to "AirPressureSystemFailure".
+  - We converted "na" strings to real NaN/missing values, making the data numeric.
+  - Anomaly: we cannot determine the data types of the features.
+  - Anomaly: some features are bins of histograms (see original data description).
+  - Anomaly: the original task used a cost matrix for evaluation.
+
+#### For OpenML Metadata
+# "classification" or "regression"
+problem_type: "classification"
+
+# Name of the target variable for prediction.
+target_feature: "AirPressureSystemFailure"
+
+# List of features that should be treated as categorical.
+categorical_features: [] # We have not enough information to determine dtypes.

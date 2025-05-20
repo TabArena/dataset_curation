@@ -1,0 +1,46 @@
+#### For Dataset Description on OpenML
+# Link to the original dataset source.
+#   The DOI. Otherwise, URL to Kaggle, OpenML, etc.
+original_dataset_source: "https://doi.org/10.24432/C5B301"
+
+# Academic reference or a please-cite-request for the dataset.
+#   MLA-style reference, include DOI if possible.
+reference: "Abdelhamid, Neda, Aladdin Ayesh, and Fadi Thabtah. 'Phishing detection based associative classification data mining.' Expert Systems with Applications 41.13 (2014): 5948-5959. https://doi.org/10.1016/j.eswa.2014.03.019"
+
+# License under which the data is made available.
+#   E.g. "CC BY 4.0", "MIT", "GPL-3.0", or "Public Domain".
+licence: "CC BY 4.0"
+
+# When the data was collected/created. If unknown, the date when it was published.
+#   Specific the year from the original source or academic reference.
+#   Otherwise, provide an estimate.
+dataset_year: "2014"
+
+# Notes from us on how the dataset was curated.
+#   - Description of any preprocessing steps we applied.
+#   - Any oddities, anomalies, or manual fixes you encountered.
+# For formatting, please add the bullet points to the list (start by replacing
+#   the N/NA bullet point). This will be printed as a markdown enumeration on OpenML.
+curation_comments: |
+  - We reversed the ordinal encoding of the original data.
+  - We renamed the target feature to be more meaningful.
+  - Anomaly: the data has many duplicates (~50%). 
+
+#### For OpenML Metadata
+# "classification" or "regression"
+problem_type: "classification"
+
+# Name of the target variable for prediction.
+target_feature: "WebsiteType"
+
+# List of features that should be treated as categorical.
+categorical_features:
+  - "SFH"
+  - "popUpWidnow"
+  - "SSLfinal_State"
+  - "Request_URL"
+  - "URL_of_Anchor"
+  - "web_traffic"
+  - "URL_Length"
+  - "age_of_domain"
+  - "having_IP_Address"

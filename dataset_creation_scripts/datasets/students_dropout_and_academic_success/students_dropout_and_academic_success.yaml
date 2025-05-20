@@ -1,0 +1,54 @@
+#### For Dataset Description on OpenML
+# Link to the original dataset source.
+#   The DOI. Otherwise, URL to Kaggle, OpenML, etc.
+original_dataset_source: "https://doi.org/10.24432/C5MC89"
+
+# Academic reference or a please-cite-request for the dataset.
+#   MLA-style reference, include DOI if possible.
+reference: "Martins, Mónica V., et al. 'Early prediction of student’s performance in higher education: A case study.' Trends and Applications in Information Systems and Technologies: Volume 1 9. Springer International Publishing, 2021.  https://doi.org/10.1007/978-3-030-72657-7_16"
+
+# License under which the data is made available.
+#   E.g. "CC BY 4.0", "MIT", "GPL-3.0", or "Public Domain".
+licence: "CC BY 4.0"
+
+# When the data was collected/created. If unknown, the date when it was published.
+#   Specific the year from the original source or academic reference.
+#   Otherwise, provide an estimate.
+dataset_year: "2021"
+
+# Notes from us on how the dataset was curated.
+#   - Description of any preprocessing steps we applied.
+#   - Any oddities, anomalies, or manual fixes you encountered.
+# For formatting, please add the bullet points to the list (start by replacing
+#   the N/NA bullet point). This will be printed as a markdown enumeration on OpenML.
+curation_comments: |
+  - We renamed the target variable and fixed some typos in the feature names.
+  - We reversed the ordinal encoding of all categorical features.
+  - We removed whitespaces and special characters from the feature names.
+
+#### For OpenML Metadata
+# "classification" or "regression"
+problem_type: "classification"
+
+# Name of the target variable for prediction.
+target_feature: "AcademicOutcome"
+
+# List of features that should be treated as categorical.
+categorical_features:
+  - "Marital_status"
+  - "Application_mode"
+  - "Course"
+  - "Daytimeevening_attendance"
+  - "Previous_qualification"
+  - "Nationality"
+  - "Mothers_qualification"
+  - "Fathers_qualification"
+  - "Mothers_occupation"
+  - "Fathers_occupation"
+  - "Displaced"
+  - "Educational_special_needs"
+  - "Debtor"
+  - "Tuition_fees_up_to_date"
+  - "Gender"
+  - "Scholarship_holder"
+  - "International"

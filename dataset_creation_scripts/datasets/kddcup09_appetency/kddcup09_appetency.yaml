@@ -1,0 +1,77 @@
+#### For Dataset Description on OpenML
+# Link to the original dataset source.
+#   The DOI. Otherwise, URL to Kaggle, OpenML, etc.
+original_dataset_source: "https://kdd.org/kdd-cup/view/kdd-cup-2009/Intro"
+
+# Academic reference or a please-cite-request for the dataset.
+#   MLA-style reference, include DOI if possible.
+reference: "Guyon, Isabelle, et al. 'Analysis of the kdd cup 2009: Fast scoring on a large orange customer database.' KDD-Cup 2009 Competition. PMLR, 2009. https://proceedings.mlr.press/v7/guyon09.html"
+
+# License under which the data is made available.
+#   E.g. "CC BY 4.0", "MIT", "GPL-3.0", or "Public Domain".
+licence: "Public" # Public on OpenML but no license found on the original source. However, it is challenge data and thus likely save to assume it is public.
+
+# When the data was collected/created. If unknown, the date when it was published.
+#   Specific the year from the original source or academic reference.
+#   Otherwise, provide an estimate.
+dataset_year: "2008" # Data was shared in March 2009 so it must have likely been collected before.
+
+# Notes from us on how the dataset was curated.
+#   - Description of any preprocessing steps we applied.
+#   - Any oddities, anomalies, or manual fixes you encountered.
+# For formatting, please add the bullet points to the list (start by replacing
+#   the N/NA bullet point). This will be printed as a markdown enumeration on OpenML.
+curation_comments: |
+  - We use the small (230 features) training data from the original data. 
+  - We use appetency as label.
+  - We dropped empty columns: "Var8", "Var15", "Var20", "Var31", "Var32", "Var39", "Var42", "Var48", "Var52", "Var55", "Var79", "Var141", "Var167", "Var169", "Var175", "Var185", "Var209", "Var230".
+  - Anomaly: this dataset has many missing values.
+  - Anomaly: the feature names and categorical values have no semantic meaning.
+
+#### For OpenML Metadata
+# "classification" or "regression"
+problem_type: "classification"
+
+# Name of the target variable for prediction.
+target_feature: "appetency"
+
+# List of features that should be treated as categorical.
+categorical_features:
+  - "Var191"
+  - "Var192"
+  - "Var193"
+  - "Var194"
+  - "Var195"
+  - "Var196"
+  - "Var197"
+  - "Var198"
+  - "Var199"
+  - "Var200"
+  - "Var201"
+  - "Var202"
+  - "Var203"
+  - "Var204"
+  - "Var205"
+  - "Var206"
+  - "Var207"
+  - "Var208"
+  - "Var210"
+  - "Var211"
+  - "Var212"
+  - "Var213"
+  - "Var214"
+  - "Var215"
+  - "Var216"
+  - "Var217"
+  - "Var218"
+  - "Var219"
+  - "Var220"
+  - "Var221"
+  - "Var222"
+  - "Var223"
+  - "Var224"
+  - "Var225"
+  - "Var226"
+  - "Var227"
+  - "Var228"
+  - "Var229"

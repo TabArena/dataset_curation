@@ -1,0 +1,11 @@
+autogluon
+pandas
+openml
+ruff
+pyyaml
+xlrd
+openpyxl
+seaborn
+tueplots
+latex
+tqdm

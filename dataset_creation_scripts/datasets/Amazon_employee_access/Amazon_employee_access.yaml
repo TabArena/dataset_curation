@@ -1,0 +1,46 @@
+#### For Dataset Description on OpenML
+# Link to the original dataset source.
+#   The DOI. Otherwise, URL to Kaggle, OpenML, etc.
+original_dataset_source: "https://www.kaggle.com/c/amazon-employee-access-challenge"
+
+# Academic reference or a please-cite-request for the dataset.
+#   MLA-style reference, include DOI if possible.
+reference: "Ben Hamner, kenmonta, and Will Cukierski. Amazon.com - Employee Access Challenge. https://kaggle.com/competitions/amazon-employee-access-challenge, 2013. Kaggle."
+
+# License under which the data is made available.
+#   E.g. "CC BY 4.0", "MIT", "GPL-3.0", or "Public Domain".
+licence: "Public Domain" # Kaggle Competition Rules do not talk about data and public domain on OpenML -> we assume public data
+
+# When the data was collected/created. If unknown, the date when it was published.
+#   Specific the year from the original source or academic reference.
+#   Otherwise, provide an estimate.
+dataset_year: "2010" # data is from in 2010 and 2011, but collected in 2012 and published in 2013
+
+# Notes from us on how the dataset was curated.
+#   - Description of any preprocessing steps we applied.
+#   - Any oddities, anomalies, or manual fixes you encountered.
+# For formatting, please add the bullet points to the list (start by replacing
+#   the N/NA bullet point). This will be printed as a markdown enumeration on OpenML.
+curation_comments: |
+  - We only use the training data from Kaggle.
+  - Anomaly: the data might contain sub-groups related to managers and resources. 
+  - Anomaly: likely, similar to the test data, each sample represents a unique employee.
+
+#### For OpenML Metadata
+# "classification" or "regression"
+problem_type: "classification"
+
+# Name of the target variable for prediction.
+target_feature: "ResourceApproved"
+
+# List of features that should be treated as categorical.
+categorical_features:
+  - "RESOURCE"
+  - "MGR_ID"
+  - "ROLE_ROLLUP_1"
+  - "ROLE_ROLLUP_2"
+  - "ROLE_DEPTNAME"
+  - "ROLE_TITLE"
+  - "ROLE_FAMILY_DESC"
+  - "ROLE_FAMILY"
+  - "ROLE_CODE"
