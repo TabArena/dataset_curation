@@ -16,7 +16,7 @@ assignees: ''
 ### Is the data available through an API for automatic downloading, or does the license allow for reuploading the data? 
 <TODO>
 
-### What is the sample size? % Covers sample size criterion
+### What is the sample size?
 <TODO>
 
 ### Was the data extracted from another modality (i.e., text, image, time-series)? If yes: Are tabular learning methods a reasonable solution compared to domain-specific methods? (If possible, provide a reference)
