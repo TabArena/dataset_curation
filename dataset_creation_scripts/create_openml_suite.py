@@ -8,7 +8,7 @@ TESTING = False
 if TESTING:
     openml.config.start_using_configuration_for_example()
 else:
-    openml.config.apikey = "39e72709e59c772cf544b839fe994228"  # TODO: use your own
+    openml.config.apikey = ""  # TODO: use your own
     openml.config.server = "https://api.openml.org/api/v1/xml"
     openml.config.cache_directory = "./openml_cache"
 
