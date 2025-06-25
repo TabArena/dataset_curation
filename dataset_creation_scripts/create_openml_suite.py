@@ -3,7 +3,7 @@ from __future__ import annotations
 import openml
 import pandas as pd
 
-TESTING = False
+TESTING = True
 
 if TESTING:
     openml.config.start_using_configuration_for_example()
